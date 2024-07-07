@@ -1,0 +1,260 @@
+/* Global styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F3F8F9;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header styles */
+header {
+    position: sticky;
+    top: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    background-color: #904837;
+    font-size: large;
+}
+
+div.name {
+    font-size: larger;
+    font-style: italic;
+
+}
+
+div.links ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+div.links ul li {
+    list-style: none;
+    transition: 0.5 ease-in-out;
+}
+
+div.links ul li:hover {
+    text-decoration: underline;
+    scale: 1.3;
+}
+
+/* about section styles */
+
+main {
+    margin: 0 5%;
+}
+
+section#about h2 {
+    margin-top: 25px;
+}
+
+section#about div.about-content {
+    display: flex;
+}
+
+section#about div.about-content div.text {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    font-size: 1.25rem;
+}
+
+section#about div.about-content div.text span {
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: #904837;
+
+}
+
+section#about .about-content div.img {
+    flex: 2;
+}
+
+section#about .about-content div.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* projects section styles*/
+section#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+section#projects div.projects-container {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+section#projects div.projects-container .project {
+    border: 1px solid;
+    width: 450px;
+    border-radius: 10px;
+}
+
+section#projects div.projects-container .project h3 {
+    text-align: center;
+    padding: 5px 0;
+}
+
+section#projects div.projects-container .project img {
+    width: 100%;
+}
+
+section#projects div.projects-container .project p {
+    padding: 5px 8px;
+}
+
+section#projects div.projects-container .project hr {
+    border: 1px #904837 solid;
+    width: 50%;
+    margin: 8px auto;
+}
+
+section#projects div.projects-container .project .links {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+section#projects div.projects-container .project .links a {
+    color: rgba(0, 89, 116, 0.795);
+}
+
+section#projects div.projects-container .project .links a:hover {
+    text-decoration: underline;
+}
+
+/* contact section styles*/
+section#contact {
+    margin-top: 25px;
+}
+
+section#contact div.contact-container {
+    display: flex;
+    padding: 15px;
+}
+
+section#contact div.contact-container div.img {
+    flex: 2;
+}
+
+section#contact div.contact-container div.img img {
+    width: 100%;
+}
+
+section#contact div.contact-container div.text {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+section#contact div.contact-container div.text ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+section#contact div.contact-container div.text ul li a {
+    color: rgba(0, 89, 116, 0.795);
+    font-size: large;
+}
+
+section#contact div.contact-container div.text ul li a:hover {
+    text-decoration: underline;
+}
+
+/* footer styles */
+footer {
+    background-color: #904837;
+    padding: 20px 80px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* responsive design */
+
+@media (max-width: 1200px) {
+    header nav {
+        padding: 20px 50px;
+    }
+
+    main {
+        margin: 0 3%;
+    }
+
+    section#projects div.projects-container .project {
+        width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section#about div.about-content {
+        flex-direction: column;
+    }
+
+    section#about div.about-content div.img,
+    section#about div.about-content div.text {
+        flex: unset;
+        width: 100%;
+    }
+
+    section#projects div.projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#contact div.contact-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        padding: 20px 30px;
+    }
+
+    div.links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    header nav {
+        padding: 20px 15px;
+    }
+
+    section#projects div.projects-container .project {
+        width: 100%;
+    }
+
+    section#contact div.contact-container div.text ul li a {
+        font-size: medium;
+    }
+}
